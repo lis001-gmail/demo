@@ -16,8 +16,8 @@ public class MemberServiceImpl implements MemberService {
 	private MembersDAO dao;
 	
 	@Override
-	public List<Member> testMember() {
-		return dao.testMember();
+	public List<Member> getAllMembers() {
+		return dao.getAllMembers();
 //		Member testMember = new Member();
 //		testMember.setId(1);
 //		testMember.setName("testName");
@@ -25,5 +25,15 @@ public class MemberServiceImpl implements MemberService {
 //		testMember.setDept("서비스로 이동함");
 //		
 //		return testMember;
+	}
+	
+	@Override
+	public Member getMember(Integer id) {
+		return dao.getMember(id);
+	}
+	
+	@Override
+	public void insertMember(Member member) {
+		dao.insertMember(member);
 	}
 }

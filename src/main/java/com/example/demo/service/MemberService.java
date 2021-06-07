@@ -5,5 +5,7 @@ import java.util.List;
 import com.example.demo.dto.Member;
 
 public interface MemberService {
-	List<Member> testMember();
+	List<Member> getAllMembers();
+	Member getMember(Integer id);
+	void insertMember(Member member);
 }
